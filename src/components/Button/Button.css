@@ -1,0 +1,39 @@
+.button{
+    width: 140px;
+    height: 45px;
+    font-family: 'Mulish', sans-serif;
+    border: none;
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 5px;
+}
+.primary{
+    background: #6472E8;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-size: 20px;
+}
+.secondary{
+    background: #CCCEDD;
+    color: #56586d;
+    padding: 8px 13px;
+    font-size: 20px;
+}
+.iconButton{
+    width: auto;
+    height: auto;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.disabled{
+    opacity: 0.6;
+    cursor: auto;
+}
+.withoutBack{
+    background: inherit;
+}

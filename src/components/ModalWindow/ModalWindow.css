@@ -1,0 +1,99 @@
+.modalCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background:  #5c5f74bb;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1; /* по умолчанию модальное окно прозрачно */
+}
+.modalWindow{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8px;
+    width: 28%;
+    height: 56%;
+    margin: 0 auto;
+}
+.modalInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: #ECEDF5;
+    border-radius: 7px;
+    padding: 16px 14px;
+    box-shadow: 0px 0px 15px 2px rgb(105, 105, 105);
+    box-sizing: border-box; 
+    /* падинги включаютя в длину */
+}
+.closeWindow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    padding: 7px;
+    background: #ECEDF5;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 2px rgb(105, 105, 105)
+}
+.closeWindow img{
+    width: 20px;
+    height: 20px;
+}
+h2{
+    font-size: 20px;
+    color: #56586d;
+}
+.params p{
+    font-size: 15px;
+    color: #55586b;
+}
+.params{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+.param{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 7px;
+}
+.windowButtons{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+}
+@media screen and (max-width: 1136px){
+    .modalWindow{
+        width: 54%;
+    }
+}
+@media screen and (max-width: 700px){
+    .modalWindow{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 500px){
+    .windowButtons{
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    .windowButtons button{
+        width: 100%;
+    }
+}
