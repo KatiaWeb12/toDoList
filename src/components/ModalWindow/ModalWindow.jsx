@@ -4,6 +4,7 @@ import Input from "../Input/Input";
 import "./ModalWindow.css";
 import close from "../../static/close.png";
 import Select from "../Select/Select";
+import { OPTIONS } from "../../constants";
 export default function ModalWindow({
   modalControl,
   taskHandler,
@@ -28,7 +29,7 @@ export default function ModalWindow({
     } else {
       setDisabled(!Boolean(taskName));
     }
-  }, [taskName, taskStatus]);
+  }, [taskName, taskStatus, title, status]);
   return (
     <div className="modalCont" onClick={closeHandler}>
       <div className="modalWindow">
@@ -48,6 +49,8 @@ export default function ModalWindow({
                 status={taskStatus}
                 changeStatus={setTaskStatus}
                 variant="modalSelect"
+                options={OPTIONS.filter((el) => el.value !== "all")}
+                fullWidth
               />
             </div>
           </div>

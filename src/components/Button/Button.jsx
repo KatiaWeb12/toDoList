@@ -19,7 +19,7 @@ export default function Button({
           className={classNames("button", variant, { disabled, withoutBack })}
           onClick={clickHandler}
         >
-          {img && <img src={img}></img>}
+          {img && <img alt="img" src={img}></img>}
           {text}
         </button>
       )}

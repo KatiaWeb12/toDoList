@@ -7,6 +7,7 @@ import Select from "./components/Select/Select";
 import getFormattedDate from "./helpers/getFormattedDate";
 import saveToLocalStorage from "./helpers/saveToLocalStorage.js";
 import getFromLocalStorage from "./helpers/getFromLocalStorage";
+import { OPTIONS } from "./constants";
 function App() {
   const [list, setList] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,7 @@ function App() {
           variant="filterSelect"
           status={filterStatus}
           changeStatus={setFilterStatus}
+          options={OPTIONS}
         />
       </div>
       <TaskList
@@ -55,7 +57,7 @@ function App() {
           modalControl={modalControl}
           taskHandler={addTask}
           title=""
-          status="created"
+          status={OPTIONS[1].value}
         />
       )}
     </div>

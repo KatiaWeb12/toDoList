@@ -5,6 +5,7 @@ import Rubbish from "../../static/rubish.png";
 import Edit from "../../static/edit.png";
 import Watch from "../../static/watch.png";
 import ModalWindow from "../ModalWindow/ModalWindow";
+import { OPTIONS } from "../../constants";
 export default function TaskListItem({
   info,
   deleteHandler,
@@ -74,7 +75,7 @@ export default function TaskListItem({
           taskHandler={updateTask}
           modalControl={editControl}
           title={info.title}
-          status={info.status}
+          status={OPTIONS.find((el) => el.value === info.status).value}
         />
       )}
     </li>

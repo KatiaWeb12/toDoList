@@ -11,6 +11,7 @@
     bottom: 0;
     left: 0;
     opacity: 1; /* по умолчанию модальное окно прозрачно */
+    z-index: 10;
 }
 .modalWindow{
     display: flex;
